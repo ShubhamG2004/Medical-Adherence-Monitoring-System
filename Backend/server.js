@@ -36,12 +36,12 @@ app.use(express.json());
 // serve images
 app.use('/uploads', express.static('uploads'));
 
-app.use('/auth', require('./routes/authRoutes'));
-app.use('/course', require('./routes/courseRoutes'));
-app.use('/general', require('./routes/generalRoutes'));
-app.use('/media', require('./routes/mediaRoutes'));
-app.use('/special', require('./routes/specialRoutes'));
-app.use('/user-feature', require('./routes/userFeaturesRoutes'));
+app.use('/api/v1/auth', require('./routes/authRoutes'));
+app.use('/api/v1/course', require('./routes/courseRoutes'));
+app.use('/api/v1/general', require('./routes/generalRoutes'));
+app.use('/api/v1/media', require('./routes/mediaRoutes'));
+app.use('/api/v1/special', require('./routes/specialRoutes'));
+app.use('/api/v1/user-features', require('./routes/userFeaturesRoutes'));
 
 app.post('/broadcast', (req, res) => {
     const { message } = req.body;

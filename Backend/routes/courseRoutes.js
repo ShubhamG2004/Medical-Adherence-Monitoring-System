@@ -5,8 +5,8 @@ const { authUser } = require('../middlewares/authUser.js');
 const router = express.Router();
 
 
-router.post('/new', authUser, courseController.newCourse);
-router.post('/addMedicineCourse', authUser, courseController.addMedicineCourse);
+router.post('/new-course', authUser, courseController.newCourse);
+router.post('/add-medicine-course', authUser, courseController.addMedicineCourse);
 router.get('/last-7-day-matrix', authUser, courseController.getLast7DayMatrix);
 router.get('/todays-schedule', authUser, courseController.getTodaysSchedule);
 router.delete('/:course_id', authUser, courseController.deleteCourse);
